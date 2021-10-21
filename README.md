@@ -26,6 +26,11 @@ temporizador são os 25 segundos).
 - Configuração de tempo personalizada com TimePicker (esse componente
 deve ser feito do 0, podendo utilizar lib auxiliar como moment).
 
+### Layout
+
+![image](https://user-images.githubusercontent.com/61104411/138223500-9fcafbfe-2958-4ca1-96b2-2f599d585025.png)
+
+
 ### :nut_and_bolt: Tecnologias
 
 Esse projeto foi desenvolvido com a seguinte técnologias:
