@@ -1,13 +1,73 @@
 import SetPomodoro from "./components/SetPomodoro";
+import React, { useContext,useEffect} from "react"
+import Animation from "./components/Animation";
+import { SettingsContext } from "./context/SettingsContext";
+import Button from "./components/Button";
 
 function App() {
+  const { 
+    pomodoro, 
+    executing,
+    setCurrentTimer,
+    SettingBtn,
+    children,
+    startAnimate,
+    startTimer,
+    pauseTimer,
+    updateExecute} = useContext(SettingsContext)
+
+    useEffect(() => {
+      updateExecute(executing)
+    }, [executing, startAnimate])
+
   return (
     <div className="container">
       <h1>Pomodoro </h1>
       <small>Seja Produtivo da forma correta</small>
-      <SetPomodoro/>
+      {pomodoro !== 0 ?
+      <>
+        <ul className="labels">
+          <li>
+            <Button 
+              title="Trabalhar" 
+              activeClass={executing.active === 'work' ? 'active-label' : undefined} 
+              _callback={() => setCurrentTimer('work')} 
+            />
+          </li>
+          <li>
+            <Button 
+              title="Pausa Curta" 
+              activeClass={executing.active === 'short' ? 'active-label' : undefined} 
+              _callback={() => setCurrentTimer('short')} 
+            />
+          </li>
+          <li>
+            <Button 
+              title="Pausa Longa" 
+              activeClass={executing.active === 'long' ? 'active-label' : undefined} 
+              _callback={() => setCurrentTimer('long')} 
+            />
+          </li>
+        </ul>
+        <Button title="Configurações" _callback={SettingBtn} />
+        <div className="timer-container">
+          <div className="time-wrapper">
+              <Animation
+                key={pomodoro} 
+                timer={pomodoro} 
+                animate={startAnimate}
+              >
+                {children}
+              </Animation>
+          </div>
+        </div>
+        <div className="button-wrapper">
+          <Button title="Start" activeClass={!startAnimate ? 'active' : undefined} _callback={startTimer} />
+          <Button title="Pause" activeClass={startAnimate ? 'active' : undefined} _callback={pauseTimer} />
+        </div>
+      </> : <SetPomodoro />}
     </div>
-  );
+  )
 }
 
 export default App;
