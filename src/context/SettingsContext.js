@@ -22,6 +22,25 @@ const SettingsContextProvider = (props) => {
 
   const updateExecute = updatedSettings => {
     setExecuting(updatedSettings)
+    setTimerTime(updatedSettings)
+  }
+
+  const setTimerTime = evalue => {
+    switch (evalue.active) {
+      case 'work':
+        setPomodoro(evalue.work)
+        break;
+      case 'short':
+        setPomodoro(evalue.short)
+        break;
+      case 'long':
+        setPomodoro(evalue.long)
+        break;
+
+      default:
+        setPomodoro(0)
+        break;
+    }
   }
 
   return (
