@@ -19,7 +19,7 @@ const Animation = ({ key , timer , animate , children }) => {
         ['#f5ae23', 0.33],
         ['#f5ae23', 0.33],
       ] }
-      trailColor="#151932"
+      trailColor="#4E2559"
       onComplete={() => {
         stopAnimate()
       }}

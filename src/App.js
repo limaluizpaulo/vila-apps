@@ -50,7 +50,7 @@ function App() {
             />
           </li>
         </ul>
-        <Button title="Configurações" _callback={SettingBtn} />
+        {/*<Button title="Configurações" _callback={SettingBtn} />*/}
         <div className="timer-container">
           <div className="time-wrapper">
               <Animation
