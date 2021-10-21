@@ -15,9 +15,9 @@ const Animation = ({ key , timer , animate , children }) => {
       strokeWidth={6}
       size={220}
       colors={ [
-        ['#4e2559', 0.33],
         ['#f5ae23', 0.33],
-        ['#34bf98', 0.33],
+        ['#f5ae23', 0.33],
+        ['#f5ae23', 0.33],
       ] }
       trailColor="#151932"
       onComplete={() => {

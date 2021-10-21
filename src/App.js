@@ -3,6 +3,7 @@ import React, { useContext,useEffect} from "react"
 import Animation from "./components/Animation";
 import { SettingsContext } from "./context/SettingsContext";
 import Button from "./components/Button";
+import logo from "./assets/logo.png";
 
 function App() {
   const { 
@@ -22,7 +23,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1>Pomodoro </h1>
+      <img src={logo} alt="Vila Apps" />
       <small>Seja Produtivo da forma correta</small>
       {pomodoro !== 0 ?
       <>
