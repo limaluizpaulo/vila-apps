@@ -7,7 +7,7 @@ import logo from "./assets/logo.png";
 
 function App() {
   const { 
-    pomodoro, 
+    pomodoro,
     executing,
     setCurrentTimer,
     SettingBtn,
@@ -15,7 +15,8 @@ function App() {
     startAnimate,
     startTimer,
     pauseTimer,
-    updateExecute} = useContext(SettingsContext)
+    updateExecute,
+    stopAnimate} = useContext(SettingsContext)
 
     useEffect(() => {
       updateExecute(executing)
@@ -50,7 +51,7 @@ function App() {
             />
           </li>
         </ul>
-        {/*<Button title="Configurações" _callback={SettingBtn} />*/}
+        <Button title="Configurações" _callback={SettingBtn} />
         <div className="timer-container">
           <div className="time-wrapper">
               <Animation
@@ -65,6 +66,7 @@ function App() {
         <div className="button-wrapper">
           <Button title="Start" activeClass={!startAnimate ? 'active' : undefined} _callback={startTimer} />
           <Button title="Pause" activeClass={startAnimate ? 'active' : undefined} _callback={pauseTimer} />
+          <Button title="Stop" activeClass={startAnimate ? 'active' : undefined} _callback={stopAnimate} />
         </div>
       </> : <SetPomodoro />}
     </div>

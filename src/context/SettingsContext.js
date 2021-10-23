@@ -18,6 +18,7 @@ const SettingsContextProvider = (props) => {
 
   function stopAnimate() {
     setStartAnimate(false)
+    setPomodoro(0)
   }
 
   const SettingBtn = () => {

@@ -34,7 +34,6 @@ const SetPomodoro = () => {
           long: parseInt(value)
         })
         break;
-
     }
   }
 
