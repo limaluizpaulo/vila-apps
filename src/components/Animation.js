@@ -11,7 +11,7 @@ const Animation = ({ key , timer , animate , children }) => {
     <CountdownCircleTimer
       key={key}
       isPlaying={animate}
-      duration={timer *60}
+      duration={timer}
       strokeWidth={6}
       size={220}
       colors={ [

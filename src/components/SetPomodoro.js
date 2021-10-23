@@ -5,9 +5,9 @@ const SetPomodoro = () => {
   const { updateExecute } = useContext(SettingsContext)
 
   const [newTimer, setNewTimer] = useState({
-    work: 0.41,
-    short: 0.07,
-    long: 0.16,
+    work: 25,
+    short: 5,
+    long: 10,
     active: 'work'
   })
 
