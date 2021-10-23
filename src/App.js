@@ -64,9 +64,9 @@ function App() {
           </div>
         </div>
         <div className="button-wrapper">
-          <Button title="Start" activeClass={!startAnimate ? 'active-label' : undefined} _callback={startTimer} />
-          <Button title="Pause" activeClass={startAnimate ? 'active-label' : undefined} _callback={pauseTimer} />
-          <Button title="Stop" activeClass={startAnimate ? 'active-label' : undefined} _callback={stopAnimate} />
+          <Button title="Iniciar" activeClass={!startAnimate ? 'active-label' : undefined} _callback={startTimer} />
+          <Button title="Pausar" activeClass={startAnimate ? 'active-label' : undefined} _callback={pauseTimer} />
+          <Button title="Parar" activeClass={startAnimate ? 'active-label' : undefined} _callback={stopAnimate} />
         </div>
       </> : <SetPomodoro />}
     </div>
