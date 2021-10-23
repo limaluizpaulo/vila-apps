@@ -1,4 +1,5 @@
 import React, { createContext, useState } from 'react'
+import beep from '../assets/beep.mp3'
 
 export const SettingsContext = createContext()
 
@@ -16,9 +17,18 @@ const SettingsContextProvider = (props) => {
     setStartAnimate(false)
   }
 
+  const play = () => {
+    var audio = new Audio(
+      `${beep}`
+    );
+    audio.play();
+  }
+
   function stopAnimate() {
     setStartAnimate(false)
     setPomodoro(0)
+
+    play();
   }
 
   const SettingBtn = () => {
@@ -60,9 +70,9 @@ const SettingsContextProvider = (props) => {
   const children = ({ remainingTime }) => {
     const minutes = Math.floor(remainingTime / 60)
     const seconds = remainingTime % 60
-    
+
     return `${minutes}:${seconds}`
-    }
+  }
 
   return (
     <SettingsContext.Provider
