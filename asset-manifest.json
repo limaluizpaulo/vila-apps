@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/vila-apps/static/css/main.2ecc92aa.chunk.css",
+    "main.js": "/vila-apps/static/js/main.59aa6e61.chunk.js",
+    "main.js.map": "/vila-apps/static/js/main.59aa6e61.chunk.js.map",
+    "runtime-main.js": "/vila-apps/static/js/runtime-main.8cb4a44d.js",
+    "runtime-main.js.map": "/vila-apps/static/js/runtime-main.8cb4a44d.js.map",
+    "static/js/2.9e63a2dd.chunk.js": "/vila-apps/static/js/2.9e63a2dd.chunk.js",
+    "static/js/2.9e63a2dd.chunk.js.map": "/vila-apps/static/js/2.9e63a2dd.chunk.js.map",
+    "index.html": "/vila-apps/index.html",
+    "static/css/main.2ecc92aa.chunk.css.map": "/vila-apps/static/css/main.2ecc92aa.chunk.css.map",
+    "static/js/2.9e63a2dd.chunk.js.LICENSE.txt": "/vila-apps/static/js/2.9e63a2dd.chunk.js.LICENSE.txt",
+    "static/media/beep.44d80d2e.mp3": "/vila-apps/static/media/beep.44d80d2e.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8cb4a44d.js",
+    "static/js/2.9e63a2dd.chunk.js",
+    "static/css/main.2ecc92aa.chunk.css",
+    "static/js/main.59aa6e61.chunk.js"
+  ]
+}
